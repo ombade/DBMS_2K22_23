@@ -1,6 +1,6 @@
--- Active: 1681958356418@@127.0.0.1@3306@bms
 
--- TRIGGER for the update the database 
+
+-- TRIGGER for the insert  the database 
 Delimiter $$
 create trigger ins_reader
 Before Insert ON
@@ -11,7 +11,7 @@ values (new.Rid  ,new.Rname    , new.Rage ,new.Rmobile   ,new.section  );
 end 
 Delimiter $$
 
--- TRIGGER for the delete the database 
+-- TRIGGER for the delete the database from reader table 
 
 Delimiter $$
 create trigger delete_reader
@@ -27,3 +27,7 @@ DELETE  from reader WHERE Rid = 2;
 
 select *from back_reader;
 
+-- REFERENCES 
+-- https://www.geeksforgeeks.org/sql-join-set-1-inner-left-right-and-full-joins/
+-- Author 
+-- Name OM Bade
