@@ -31,8 +31,10 @@ DELETE from back_reader where Rname = 'om';
 
 
 -- select 
-select * FROM reader;
-select * FROM reader where Rage = 33;
+select * FROM Books;
+select * FROM reader ;
+
+select * FROM back_reader ;
 select * from reader ORDER BY Rage;
 -- to display the number of the rows
 select COUNT(*) FROM reader;
