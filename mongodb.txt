@@ -1,0 +1,364 @@
+student@student-Veriton-M200-H61:~$ mongo
+MongoDB shell version v3.6.8
+connecting to: mongodb://127.0.0.1:27017
+Implicit session: session { "id" : UUID("0c785803-56ef-4c7b-949d-625c2195684f") }
+MongoDB server version: 3.6.8
+Server has startup warnings: 
+2023-05-24T10:02:54.565+0530 I STORAGE  [initandlisten] 
+2023-05-24T10:02:54.565+0530 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2023-05-24T10:02:54.565+0530 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2023-05-24T10:03:08.785+0530 I CONTROL  [initandlisten] 
+2023-05-24T10:03:08.785+0530 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2023-05-24T10:03:08.785+0530 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2023-05-24T10:03:08.785+0530 I CONTROL  [initandlisten] 
+> show dbs;
+admin         0.000GB
+config        0.000GB
+cool          0.000GB
+dsy           0.000GB
+local         0.000GB
+om            0.000GB
+product       0.000GB
+sample_mflix  0.000GB
+test          0.000GB
+yashraj       0.000GB
+> use om;
+switched to db om
+> show collections
+movies
+player
+posts
+> use movies
+switched to db movies
+> db.movies.pretty()
+2023-05-24T10:26:07.891+0530 E QUERY    [thread1] TypeError: db.movies.pretty is not a function :
+@(shell):1:1
+> db.movies.find().pretty()
+> ;
+> db.movies.find();
+> db.movies.find()
+> db.movies.find().pretty()
+> 
+> 
+> ^C
+bye
+student@student-Veriton-M200-H61:~$ mongo
+MongoDB shell version v3.6.8
+connecting to: mongodb://127.0.0.1:27017
+Implicit session: session { "id" : UUID("0cb84ec8-0e89-411c-bab2-e03d8ee77b43") }
+MongoDB server version: 3.6.8
+Server has startup warnings: 
+2023-05-24T10:02:54.565+0530 I STORAGE  [initandlisten] 
+2023-05-24T10:02:54.565+0530 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2023-05-24T10:02:54.565+0530 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2023-05-24T10:03:08.785+0530 I CONTROL  [initandlisten] 
+2023-05-24T10:03:08.785+0530 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2023-05-24T10:03:08.785+0530 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2023-05-24T10:03:08.785+0530 I CONTROL  [initandlisten] 
+> use om;
+switched to db om
+> db.movies.find().pretty()
+{
+	"_id" : ObjectId("644a335e08707ef1ddece7e7"),
+	"title" : "Jurassic World: Fallen Kingdom",
+	"genres" : [
+		"Action",
+		"Sci-Fi"
+	],
+	"runtime" : 130,
+	"rated" : "PG-13",
+	"year" : 2018,
+	"directors" : [
+		"J. A. Bayona"
+	],
+	"cast" : [
+		"Chris Pratt",
+		"Bryce Dallas Howard",
+		"Rafe Spall"
+	],
+	"type" : "movie"
+}
+{
+	"_id" : ObjectId("644a335e08707ef1ddece7e8"),
+	"title" : "Tag",
+	"genres" : [
+		"Comedy",
+		"Action"
+	],
+	"runtime" : 105,
+	"rated" : "R",
+	"year" : 2018,
+	"directors" : [
+		"Jeff Tomsic"
+	],
+	"cast" : [
+		"Annabelle Wallis",
+		"Jeremy Renner",
+		"Jon Hamm"
+	],
+	"type" : "movie"
+}
+{
+	"_id" : ObjectId("6451e7cf8b81c65985b5799b"),
+	"title" : "Titanic",
+	"year" : 1997,
+	"genres" : [
+		"Drama",
+		"Romance"
+	],
+	"rated" : "PG-13",
+	"languages" : [
+		"English",
+		"French",
+		"German",
+		"Swedish",
+		"Italian",
+		"Russian"
+	],
+	"released" : ISODate("1997-12-19T00:00:00Z"),
+	"awards" : {
+		"wins" : 127,
+		"nominations" : 63,
+		"text" : "Won 11 Oscars. Another 116 wins & 63 nominations."
+	},
+	"cast" : [
+		"Leonardo DiCaprio",
+		"Kate Winslet",
+		"Billy Zane",
+		"Kathy Bates"
+	],
+	"directors" : [
+		"James Cameron"
+	]
+}
+{
+	"_id" : ObjectId("6451e7cf8b81c65985b5799c"),
+	"title" : "The Dark Knight",
+	"year" : 2008,
+	"genres" : [
+		"Action",
+		"Crime",
+		"Drama"
+	],
+	"rated" : "PG-13",
+	"languages" : [
+		"English",
+		"Mandarin"
+	],
+	"released" : ISODate("2008-07-18T00:00:00Z"),
+	"awards" : {
+		"wins" : 144,
+		"nominations" : 106,
+		"text" : "Won 2 Oscars. Another 142 wins & 106 nominations."
+	},
+	"cast" : [
+		"Christian Bale",
+		"Heath Ledger",
+		"Aaron Eckhart",
+		"Michael Caine"
+	],
+	"directors" : [
+		"Christopher Nolan"
+	]
+}
+{
+	"_id" : ObjectId("6451e7cf8b81c65985b5799d"),
+	"title" : "Spirited Away",
+	"year" : 2001,
+	"genres" : [
+		"Animation",
+		"Adventure",
+		"Family"
+	],
+	"rated" : "PG",
+	"languages" : [
+		"Japanese"
+	],
+	"released" : ISODate("2003-03-28T00:00:00Z"),
+	"awards" : {
+		"wins" : 52,
+		"nominations" : 22,
+		"text" : "Won 1 Oscar. Another 51 wins & 22 nominations."
+	},
+	"cast" : [
+		"Rumi Hiiragi",
+		"Miyu Irino",
+		"Mari Natsuki",
+		"Takashi Naitè"
+	],
+	"directors" : [
+		"Hayao Miyazaki"
+	]
+}
+{
+	"_id" : ObjectId("6451e7cf8b81c65985b5799e"),
+	"title" : "Casablanca",
+	"genres" : [
+		"Drama",
+		"Romance",
+		"War"
+	],
+	"rated" : "PG",
+	"cast" : [
+		"Humphrey Bogart",
+		"Ingrid Bergman",
+		"Paul Henreid",
+		"Claude Rains"
+	],
+	"languages" : [
+		"English",
+		"French",
+		"German",
+		"Italian"
+	],
+	"released" : ISODate("1943-01-23T00:00:00Z"),
+	"directors" : [
+		"Michael Curtiz"
+	],
+	"awards" : {
+		"wins" : 9,
+		"nominations" : 6,
+		"text" : "Won 3 Oscars. Another 6 wins & 6 nominations."
+	},
+	"lastupdated" : "2015-09-04 00:22:54.600000000",
+	"year" : 1942
+}
+{
+	"_id" : ObjectId("6451e8438b81c65985b5799f"),
+	"name" : "om shanti om ",
+	"year" : 2008
+}
+> db.movies.find()
+{ "_id" : ObjectId("644a335e08707ef1ddece7e7"), "title" : "Jurassic World: Fallen Kingdom", "genres" : [ "Action", "Sci-Fi" ], "runtime" : 130, "rated" : "PG-13", "year" : 2018, "directors" : [ "J. A. Bayona" ], "cast" : [ "Chris Pratt", "Bryce Dallas Howard", "Rafe Spall" ], "type" : "movie" }
+{ "_id" : ObjectId("644a335e08707ef1ddece7e8"), "title" : "Tag", "genres" : [ "Comedy", "Action" ], "runtime" : 105, "rated" : "R", "year" : 2018, "directors" : [ "Jeff Tomsic" ], "cast" : [ "Annabelle Wallis", "Jeremy Renner", "Jon Hamm" ], "type" : "movie" }
+{ "_id" : ObjectId("6451e7cf8b81c65985b5799b"), "title" : "Titanic", "year" : 1997, "genres" : [ "Drama", "Romance" ], "rated" : "PG-13", "languages" : [ "English", "French", "German", "Swedish", "Italian", "Russian" ], "released" : ISODate("1997-12-19T00:00:00Z"), "awards" : { "wins" : 127, "nominations" : 63, "text" : "Won 11 Oscars. Another 116 wins & 63 nominations." }, "cast" : [ "Leonardo DiCaprio", "Kate Winslet", "Billy Zane", "Kathy Bates" ], "directors" : [ "James Cameron" ] }
+{ "_id" : ObjectId("6451e7cf8b81c65985b5799c"), "title" : "The Dark Knight", "year" : 2008, "genres" : [ "Action", "Crime", "Drama" ], "rated" : "PG-13", "languages" : [ "English", "Mandarin" ], "released" : ISODate("2008-07-18T00:00:00Z"), "awards" : { "wins" : 144, "nominations" : 106, "text" : "Won 2 Oscars. Another 142 wins & 106 nominations." }, "cast" : [ "Christian Bale", "Heath Ledger", "Aaron Eckhart", "Michael Caine" ], "directors" : [ "Christopher Nolan" ] }
+{ "_id" : ObjectId("6451e7cf8b81c65985b5799d"), "title" : "Spirited Away", "year" : 2001, "genres" : [ "Animation", "Adventure", "Family" ], "rated" : "PG", "languages" : [ "Japanese" ], "released" : ISODate("2003-03-28T00:00:00Z"), "awards" : { "wins" : 52, "nominations" : 22, "text" : "Won 1 Oscar. Another 51 wins & 22 nominations." }, "cast" : [ "Rumi Hiiragi", "Miyu Irino", "Mari Natsuki", "Takashi Naitè" ], "directors" : [ "Hayao Miyazaki" ] }
+{ "_id" : ObjectId("6451e7cf8b81c65985b5799e"), "title" : "Casablanca", "genres" : [ "Drama", "Romance", "War" ], "rated" : "PG", "cast" : [ "Humphrey Bogart", "Ingrid Bergman", "Paul Henreid", "Claude Rains" ], "languages" : [ "English", "French", "German", "Italian" ], "released" : ISODate("1943-01-23T00:00:00Z"), "directors" : [ "Michael Curtiz" ], "awards" : { "wins" : 9, "nominations" : 6, "text" : "Won 3 Oscars. Another 6 wins & 6 nominations." }, "lastupdated" : "2015-09-04 00:22:54.600000000", "year" : 1942 }
+{ "_id" : ObjectId("6451e8438b81c65985b5799f"), "name" : "om shanti om ", "year" : 2008 }
+> db.moives.find({"name" : "om shanti om "})
+> db.moives.find({name : "om shanti om "})
+> db.posts.find( {category: "News"} )
+{ "_id" : ObjectId("6451f6048b81c65985b579a0"), "title" : "Post Title 1", "body" : "Body of post.", "category" : "News", "likes" : 2, "tags" : [ "news", "events" ], "date" : "Wed May 03 2023 11:19:56 GMT+0530 (IST)" }
+> db.posts.find({}, {title: 1, date: 1})
+{ "_id" : ObjectId("6451f6048b81c65985b579a0"), "title" : "Post Title 1", "date" : "Wed May 03 2023 11:19:56 GMT+0530 (IST)" }
+> db.posts.find({}, {_id: 0, title: 1, date: 1})
+{ "title" : "Post Title 1", "date" : "Wed May 03 2023 11:19:56 GMT+0530 (IST)" }
+> db.posts.find({}, {_id: 0, title: 1, date: 1}).pretty()
+{
+	"title" : "Post Title 1",
+	"date" : "Wed May 03 2023 11:19:56 GMT+0530 (IST)"
+}
+> db.posts.find({}, {category: 0}).pretty()
+{
+	"_id" : ObjectId("6451f6048b81c65985b579a0"),
+	"title" : "Post Title 1",
+	"body" : "Body of post.",
+	"likes" : 2,
+	"tags" : [
+		"news",
+		"events"
+	],
+	"date" : "Wed May 03 2023 11:19:56 GMT+0530 (IST)"
+}
+> update the document
+2023-05-24T10:32:38.613+0530 E QUERY    [thread1] SyntaxError: missing ; before statement @(shell):1:7
+> db.posts.updateOne( { title: "Post Title 1" }, { $set: { likes: 2 } } ) 
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 0 }
+> db.posts.find( { title: "Post Title 1" } ) .pretty()
+{
+	"_id" : ObjectId("6451f6048b81c65985b579a0"),
+	"title" : "Post Title 1",
+	"body" : "Body of post.",
+	"category" : "News",
+	"likes" : 2,
+	"tags" : [
+		"news",
+		"events"
+	],
+	"date" : "Wed May 03 2023 11:19:56 GMT+0530 (IST)"
+}
+> db.posts.updateOne( 
+...   { title: "Post Title 5" }, 
+...   {
+...     $set: 
+...       {
+...         title: "Post Title 5",
+...         body: "Body of post.",
+...         category: "Event",
+...         likes: 5,
+...         tags: ["news", "events"],
+...         date: Date()
+...       }
+...   }, 
+...   { upsert: true }
+... )
+{
+	"acknowledged" : true,
+	"matchedCount" : 0,
+	"modifiedCount" : 0,
+	"upsertedId" : ObjectId("646d9ac09acf1b5b6b4bef0f")
+}
+> 
+> db.posts.updateMany({}, { $inc: { likes: 1 } })
+{ "acknowledged" : true, "matchedCount" : 2, "modifiedCount" : 2 }
+> db.posts.deleteOne({ title: "Post Title 5" })
+{ "acknowledged" : true, "deletedCount" : 1 }
+> db.posts.deleteMany({ category: "Technology" })
+{ "acknowledged" : true, "deletedCount" : 0 }
+> db.posts.aggregate([
+...   // Stage 1: Only find documents that have more than 1 like
+...   {
+...     $match: { likes: { $gt: 1 } }
+...   },
+...   // Stage 2: Group documents by category and sum each categories likes
+
+...   {
+...     $group: { _id: "$category", totalLikes: { $sum: "$likes" } }
+...   }
+... ])
+{ "_id" : "News", "totalLikes" : 3 }
+> db.listingsAndReviews.aggregate(
+...     [ { $group : { _id : "$property_type" } } ]
+... )
+> db.listingsAndReviews.aggregate([ 
+...   { 
+...     $sort: { "accommodates": -1 } 
+...   },
+...   {
+...     $project: {
+...       "name": 1,
+...       "accommodates": 1
+...     }
+...   },
+...   {
+...     $limit: 5
+...   }
+... ])
+> db.listingsAndReviews.aggregate([ 
+...   { $match : { property_type : "House" } },
+...   { $limit: 2 },
+...   { $project: {
+...     "name": 1,
+...     "bedrooms": 1,
+...     "price": 1
+...   }}
+... ])
+> 
+> 
+> 
+>   { $match : { property_type : "House" } },
+...   { $limit: 2 },
+...   { $project: {
+...     "name": 1,
+...     "bedrooms": 1,
+...     "price": 1
+...   }}
+2023-05-24T10:44:04.241+0530 E QUERY    [thread1] SyntaxError: expected expression, got ',' @(shell):1:40
+> ])
+2023-05-24T10:44:04.242+0530 E QUERY    [thread1] SyntaxError: expected expression, got ']' @(shell):1:0
+> 
+[1]+  Stopped                 mongo
+student@student-Veriton-M200-H61:~$ 
+
+
